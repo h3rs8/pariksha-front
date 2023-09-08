@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.text-center{
+    text-align: center;
+}
+
+.pad{
+    padding: 2rem;
+}
+.full-width {
+    width: 100%;
+}
+
+.bground {
+    background-color: #BCAF9C;
+}
+
+.eerie {
+    background-color: #08042c;
+}
+
+.poppins {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.violet {
+    color: #ce8ffb;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+.example-card {
+    background-color: #DDDAFB;
+}
+.font-size-3rem{
+    font-size: 1px;
+}
+.mt10{
+    margin-top:10px;
+}
+.ml20{
+    margin-left: 2rem;
+}
+.mt20{
+    margin-top: 2rem;
+}
+.w100{
+    width: 100%;
+}

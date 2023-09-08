@@ -1,0 +1,49 @@
+<mat-card >
+    <mat-card-header >
+        <mat-card-title ><h1  class="poppins">Your Profile</h1></mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+
+        <div class="bootstrap-wrapper">
+            <div class="container">
+                <div class="container text-center ">
+                    <img style="border:0.5rem solid darkmagenta; height:10rem;border-radius: 5rem;" src="../../../../assets/pro.png" alt="defaultprofile"
+                    class="profile-image">
+                    <h1 class="mt20">Profile Name</h1>
+
+                   
+                </div>
+
+                <div *ngIf="user!=null" class="row">
+                    <div  class="col-md-10 offset-md-1">
+                        <table class="table text-center">
+                            <tr >
+                                <td>Username</td>
+                                <td>{{user.username}}</td>
+                            </tr>
+                            <tr>
+                                <td>Name</td>
+                                <td>{{(user.firstName +' '+ user.lastName).toUpperCase()}}</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>{{user.email}}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>{{user.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>{{user.enabled? 'ACTIVE' :'NOT ACTIVE'}}</td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+    
+
+</mat-card>

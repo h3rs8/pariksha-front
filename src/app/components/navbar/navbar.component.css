@@ -1,0 +1,16 @@
+.example-spacer {
+    flex: 2 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+    background: #1c5087;
+    color: #fff;
+}
+.flexi{
+    display:flex;
+    /* align-content: space-around; */
+    gap:8rem;
+    align-items: baseline;
+    justify-content: center;
+
+}
