@@ -1,4 +1,6 @@
-# Examfront
+# Pariksha-front  
+
+The backend for this project is available at [h3rs8/pariksha](https://github.com/h3rs8/pariksha-front).
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
