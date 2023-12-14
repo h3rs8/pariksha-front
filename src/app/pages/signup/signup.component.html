@@ -44,6 +44,14 @@
                         <mat-label>Phone</mat-label>
                         <input required [(ngModel)]="user.phone" name="phone" type="numeric" matInput placeholder="Enter Here">
                     </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>What was you first car's name?</mat-label>
+                        <input required [(ngModel)]="user.forgot1" name="phone" type="numeric" matInput placeholder="Enter Here">
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="full-width">
+                        <mat-label>In which city were you born? </mat-label>
+                        <input required [(ngModel)]="user.forgot2" name="phone" type="numeric" matInput placeholder="Enter Here">
+                    </mat-form-field>
                     <div class="container text-center"  >
                         <button type="submit" mat-raised-button color="primary" style="margin-right: 4rem ;">Register Here</button>
                         <button type="reset" mat-raised-button color="accent">Clear</button>

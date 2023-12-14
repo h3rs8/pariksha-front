@@ -1,0 +1,54 @@
+<div class="bootstrap-wrapper eerie full-height">
+    <div class="container ">
+        <div class="row " style="padding-top: 1rem;">
+            <div class="col-md-6 offset-md-3 " >
+                <div class="container text-center">
+                    <img src="../../../assets/logo.jpeg" alt="logo" style="height: 10em; border-radius: 50%;">
+                </div>
+                <h1 class="text-center poppins violet">Forgot Password</h1>
+                <mat-card class="example-card pad"
+                    style="border-radius: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; margin-top: 2rem;">
+                    <form (ngSubmit)="formSubmit()" class="example-form poppins">
+                        <!-- (ngSubmit)="formSubmit()" -->
+                       
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>Username</mat-label>
+                            <input [(ngModel)]="loginData.userName"
+                            required  name="username" matInput
+                                placeholder="Enter Here">
+                        </mat-form-field>
+                        <!-- password -->
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>What was your first car's name?</mat-label>
+                            <input
+                            [(ngModel)]="loginData.forgot1"
+                            required name="password" matInput
+                                placeholder="Enter Here" type="password">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>In which city were you born?</mat-label>
+                            <input
+                            [(ngModel)]="loginData.forgot2"
+                            required name="password" matInput
+                                placeholder="Enter Here" type="password">
+                        </mat-form-field>
+                        <mat-form-field appearance="outline" class="full-width">
+                            <mat-label>New Password</mat-label>
+                            <input
+                            [(ngModel)]="loginData.password"
+                            required name="password" matInput
+                                placeholder="Enter Here" type="password">
+                        </mat-form-field>
+                        <!--  [(ngModel)]="user.password" -->
+                        <div class="container text-center">
+                            <button type="submit" mat-raised-button color="primary"
+                                style="margin-right: 4rem ;">Change Password</button>
+                            <button type="reset" mat-raised-button color="accent">Clear</button>
+
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

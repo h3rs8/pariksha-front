@@ -1,0 +1,28 @@
+<mat-card class="example-card pad"
+style="border-radius: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; margin-top: 2rem;">
+<form (ngSubmit)="formSubmit()" class="example-form poppins">
+    <!-- (ngSubmit)="formSubmit()" -->
+    <h1>Update Details</h1>
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Phone</mat-label>
+        <input [(ngModel)]="userdata.phone"
+        required  name="username" matInput
+            placeholder="Enter Here">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input [(ngModel)]="userdata.email"
+        required  name="username" matInput
+            placeholder="Enter Here">
+    </mat-form-field>
+    <h5><b> Note:You will have to Login again</b></h5>
+    <div class="container text-center">
+        <button type="submit" mat-raised-button color="primary"
+            style="margin-right: 4rem ;">Submit</button>
+        
+        
+
+    </div>
+    
+</form></mat-card>
+    

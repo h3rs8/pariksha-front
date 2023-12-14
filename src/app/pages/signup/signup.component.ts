@@ -17,6 +17,8 @@ export class SignupComponent {
   password: '',
   firstName: '',
   lastName: '',
+  forgot1:'',
+  forgot2:'',
   email: '',
   phone: ''
 }

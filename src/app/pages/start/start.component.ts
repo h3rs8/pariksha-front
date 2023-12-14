@@ -1,9 +1,12 @@
 import { LocationStrategy } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
+import baseUrl from 'src/app/services/helper';
 import { LoginService } from 'src/app/services/login.service';
 import { QuestionService } from 'src/app/services/question.service';
+import { QuizService } from 'src/app/services/quiz.service';
 
 @Component({
   selector: 'app-start',
@@ -13,6 +16,7 @@ import { QuestionService } from 'src/app/services/question.service';
 export class StartComponent  {
   qid:any;
   questions:any;
+  qname:any;
 
   marksGot=0;
   correctAnswers=0;
@@ -23,7 +27,7 @@ export class StartComponent  {
   timer:any;
 
 
-  constructor(private locationSt: LocationStrategy, private _route: ActivatedRoute,private _question:QuestionService,private snack:MatSnackBar,private _login:LoginService) { }
+  constructor(private _http:HttpClient ,private locationSt: LocationStrategy, private _route: ActivatedRoute,private _question:QuestionService,private snack:MatSnackBar,private _login:LoginService,private _quiz:QuizService) { }
   preventBackButton() {
     history.pushState(null, '', location.href);
     this.locationSt.onPopState(() => {
@@ -36,6 +40,7 @@ export class StartComponent  {
     
     this.preventBackButton();
     this.qid= this._route.snapshot.params['qid'];
+    
     this.loadQuestions();
 
   }
@@ -81,10 +86,24 @@ export class StartComponent  {
         this.attempted++;
       }
     });
-
-    console.log("correct answers " + this.correctAnswers);
+    let  marks ={
+      "marks":this.marksGot,
+      "uname":this._login.getUser().userName
+    }
+      
+    this._http.post(`${baseUrl}/quiz/${this.qid}/addresult`,marks).subscribe((data)=>{
+      console.log("correct answers " + this.correctAnswers);
     this.snack.open("Marks Obtained: " + this.marksGot + " Correct Answers: " + this.correctAnswers +" Attempted: "+this.attempted, '', { duration: 10000 });
-    // this._login.logout();
+
+
+
+    },(error)=>{});
+    
+
+
+    
+    this._quiz.addResult(this.qid,this.marksGot);
+    this._login.logout();
   }
 
   startTimer(){

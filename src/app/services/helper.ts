@@ -1,2 +1,3 @@
-let baseUrl = "http://localhost:8080"
+let baseUrl = "http://localhost:7777"
+//also chage in startcomponent
 export default baseUrl;

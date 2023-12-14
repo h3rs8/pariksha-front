@@ -40,4 +40,13 @@ export class QuizService {
   public getQuizzesOfCategory(cid:any){
     return this._http.get(`${baseUrl}/quiz/category/${cid}`);
   }
+  public addResult(qid:any,result:any){
+    return this._http.post(`${baseUrl}/quiz/${qid}/addresult`,result);
+  }
+  public getResult(qid:any){
+    return this._http.get(`${baseUrl}/quiz/${qid}/getresult`);
+  }
+  public getResultOfUser(uid:any){
+    return this._http.get(`${baseUrl}/quiz/getresultsofuser/${uid}`);
+  }
 }

@@ -10,7 +10,7 @@
                     style="border-radius: 2rem; margin-bottom: 2rem; padding-bottom: 2rem; margin-top: 2rem;">
                     <form (ngSubmit)="formSubmit()" class="example-form poppins">
                         <!-- (ngSubmit)="formSubmit()" -->
-                        {{loginData | json}}
+                        
                         <mat-form-field appearance="outline" class="full-width">
                             <mat-label>Username</mat-label>
                             <input [(ngModel)]="loginData.username"
@@ -29,11 +29,14 @@
                         <div class="container text-center">
                             <button type="submit" mat-raised-button color="primary"
                                 style="margin-right: 4rem ;">Login</button>
-                            <button type="reset" mat-raised-button color="accent">Clear</button>
+                            <button type="reset" mat-raised-button color="accent"  >Clear</button>
+                            
 
                         </div>
                     </form>
                 </mat-card>
+                <div><button type="button" [routerLink]="'/login/forgot'" mat-raised-button style="margin-left: 19rem ;margin-top: 0rem ;" >Forgot Password?</button></div>
+
             </div>
         </div>
     </div>

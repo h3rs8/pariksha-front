@@ -14,6 +14,13 @@ export class UserService {
     return this.http.post(`${baseUrl}/user/`,user);
 
   }
+  public forgot(user:any){
+    return this.http.post(`${baseUrl}/forgot`,user);
+  }
+
+  public update(user:any){
+    return this.http.put(`${baseUrl}/user/`,user);
+  }
 
 
 }

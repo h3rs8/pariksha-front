@@ -40,6 +40,12 @@ import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/start/start.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { QuizResultsComponent } from './pages/admin/quiz-results/quiz-results.component';
+import { ForgotpassComponent } from './pages/forgotpass/forgotpass.component';
+import { HistoryComponent } from './pages/user/history/history.component';
+import { BackgroundComponent } from './pages/background/background.component';
+import { ProfileChangeComponent } from './pages/profile-change/profile-change.component';
+import { AdminprofileComponent } from './pages/adminprofile/adminprofile.component';
 
 
 export let AppInjector: Injector;
@@ -67,7 +73,14 @@ export let AppInjector: Injector;
     SidebaruserComponent,
     LoadQuizComponent,
     InstructionsComponent,
-    StartComponent
+    StartComponent,
+    QuizResultsComponent,
+    ForgotpassComponent,
+    HistoryComponent,
+    BackgroundComponent,
+    ProfileChangeComponent,
+    
+    AdminprofileComponent
     
   ],
   imports: [

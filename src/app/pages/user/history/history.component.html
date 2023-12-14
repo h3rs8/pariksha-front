@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-list>
+        <div mat-subheader>Quiz Submissions</div>
+        <mat-card-content *ngFor="let c of results">
+            
+
+           
+
+
+
+
+             <span class="poppins"  mat-line> Quiz Name: {{ c.qname }} | Marks: {{ c.marks }}</span>
+            <div class="poppins" style="font-size: 0.7rem;">Date: {{c.date}}</div>
+            <mat-divider></mat-divider>
+        </mat-card-content>
+    </mat-list>
+    
+   
+    
+</mat-card>

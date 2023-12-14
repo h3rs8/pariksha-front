@@ -19,11 +19,17 @@ import { AddQuestionComponent } from './pages/admin/add-question/add-question.co
 import { LoadQuizComponent } from './pages/user/load-quiz/load-quiz.component';
 import { InstructionsComponent } from './pages/user/instructions/instructions.component';
 import { StartComponent } from './pages/start/start.component';
+import { QuizResultsComponent } from './pages/admin/quiz-results/quiz-results.component';
+import { ForgotpassComponent } from './pages/forgotpass/forgotpass.component';
+import { HistoryComponent } from './pages/user/history/history.component';
+import { BackgroundComponent } from './pages/background/background.component';
+import { ProfileChangeComponent } from './pages/profile-change/profile-change.component';
+import { AdminprofileComponent } from './pages/adminprofile/adminprofile.component';
 
 const routes: Routes = [
   {
     path:'',
-    component:HomeComponent,
+    component:BackgroundComponent,
     pathMatch:"full",
 
   },
@@ -37,6 +43,12 @@ const routes: Routes = [
     path:'login',
     component:LoginComponent,
     pathMatch:"full",
+    
+  },
+  {
+    path:'login/forgot',
+    component:ForgotpassComponent,
+    pathMatch:"full",
   },
   {
     path:'admin',
@@ -49,7 +61,15 @@ const routes: Routes = [
       },
       {
         path:'profile',
-        component:ProfileComponent,
+        component:AdminprofileComponent,
+        
+        
+      },
+      {
+        path:'change',
+        component: ProfileChangeComponent,
+        
+
       },
       {
         path:'categories',
@@ -72,6 +92,10 @@ const routes: Routes = [
         component: UpdateQuizComponent,
       },
       {
+        path: 'quiz/quizresults/:qid',
+        component: QuizResultsComponent,
+      },
+      {
         path: 'view-questions/:id/:title',
         component: ViewQuizQuestionsComponent,
       },
@@ -91,6 +115,23 @@ const routes: Routes = [
     
     canActivate:[normalguardGuard],
     children:[
+      {
+        path: 'history',
+        component: HistoryComponent,
+        
+      },
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        
+
+      },
+      {
+        path: 'change',
+        component: ProfileChangeComponent,
+        
+
+      },
 
       {
         path: ':catId',
@@ -99,7 +140,10 @@ const routes: Routes = [
       {
         path: 'instructions/:qid',
         component: InstructionsComponent,
+
       },
+      
+      
       
     ]
   },
